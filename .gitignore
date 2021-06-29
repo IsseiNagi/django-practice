@@ -1,2 +1,5 @@
 Pipfile
 Pipfile.lock
+todoproject/settings.py
+*/__init__.py
+*/*/__init__.py
