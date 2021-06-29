@@ -1,7 +1,8 @@
 from django.urls import path
-from .views import todo
+from .views import TodoList, TodoDetail
 
 urlpatterns = [
-    path('a/', todo)  # adminの文字列がない場合は全て、todo.urlsが呼び出される
-
+    path('list/', TodoList.as_view()),
+    # detailの中からプライマリーキーを指定して絞り込むという指定
+    path('detail/<int:pk>/', TodoDetail.as_view()),
 ]
